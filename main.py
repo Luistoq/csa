@@ -8,7 +8,6 @@ from matplotlib.ticker import MultipleLocator
 import base64
 import io
 
-# Functions from your original code
 def percent_formatter(x, pos):
     return f"{(x + 4) / 7:.1f}"
 
