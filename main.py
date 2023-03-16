@@ -82,7 +82,7 @@ def get_descriptive_statistics(sorted_data):
 
 def main():
     st.set_page_config(layout="wide")
-    st.title("Caisson Statistical Analysis")
+    st.title("Statistical Analysis")
 
     # Upload CSV
     st.header("Upload your CSV file")
