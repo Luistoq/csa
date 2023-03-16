@@ -7,45 +7,10 @@ import matplotlib.ticker as mtick
 from matplotlib.ticker import MultipleLocator
 import base64
 import io
-import plotly.graph_objs as go
 
 # Functions from your original code
 def percent_formatter(x, pos):
     return f"{(x + 4) / 7:.1f}"
-
-
-# def normplot(data, labval, firstplot):
-#     mu = np.mean(data)
-#     sig = np.std(data)
-#     n = len(data)
-#     p = [(i - 0.5) / n for i in range(1, n + 1)]
-#     x = np.sort(data)
-#     y = norm.ppf(p)
-#     ticks_perc = [0.1, 1, 5, 10, 25, 50, 75, 90, 95, 99, 99.9]
-#     ytv = np.percentile(y, ticks_perc)
-#     idxr = np.arange(1, n + 1)
-#     if n > 20000:
-#         idxr = np.concatenate((np.arange(1, 1000), np.arange(1001, 10000, 5), np.arange(10001, n, 50)))
-#
-#     fig, ax = plt.subplots()
-#     ylimval = (-4, 3)
-#
-#     if np.max(y) < 3.1:
-#         ax.scatter(x[idxr], y[idxr], label=labval, s=2, linewidth=0,
-#                    ylim=ylimval)
-#     else:
-#         ax.scatter(x[idxr], y[idxr], label=labval, s=2, linewidth=0)
-#     ax.yaxis.set_ticks_position('both')
-#     ax.yaxis.set_major_locator(MultipleLocator(1))
-#     ax.yaxis.set_minor_locator(MultipleLocator(1))
-#     ax.grid(True, which='both', axis='y', alpha=0.5)
-#     ax.legend(loc='lower right')
-#     plt.xlabel("Thickness (mm)")
-#     plt.ylabel("Proportion of area (%) ")
-#     ax.yaxis.set_major_formatter(mtick.FuncFormatter(percent_formatter))
-#     ax.set_ylim(-4, 3)
-#     plt.grid(True, which='both', axis='both', alpha=0.5)
-#     return fig
 
 def normplot(data, labval, firstplot):
     mu = np.mean(data)
